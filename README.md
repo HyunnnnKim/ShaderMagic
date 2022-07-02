@@ -1,19 +1,16 @@
 # ShaderMagic
 
-# What is a Shader?
+## What is a Shader?
 A shader is a code running on your GPU to manipulate an image before rendering it to the screen.
 
-## Triangle
-A triangle is made up of 3 points which we call vertices. \
-Each vertex has a position in 3 directions(x, y, z) in the world space.
-
 ## Projecting a Triangle
+A triangle is made up of 3 points which we call vertices. \
+Each vertex has a position in 3 directions(x, y, z) in the world space. \
 To render a triangle to a 2D screen requires two steps.
 - First, the vertices of a triangle should be positioned in the world space.
 - Second, the triangle needs to be colored. This could be by simply filling all pixels inside the triangle vertices with a simple color.
 
-## Unity Shaders
-Unity provides shaders to echo this process.
+Unity provides two shaders to echo this process.
 - Vertex Shader: Moves the vertices from model coordinates to the screen.
 - Fragment Shader: Calls for each pixel. The output of this shader is in RGBA format. Each channel of RGBA format has a value between 0 and 1.
 
