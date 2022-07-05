@@ -19,7 +19,8 @@ Shader "ShaderMagic/QuadUnlit"
 
             fixed4 frag (v2f_img i) : SV_Target
             {
-                return fixed4(1, 0, 0, 1);
+                fixed3 color = fixed3((sin(_Time.w)+1)/2, 0, (cos(_Time.w)+1/2));
+                return fixed4(color, 1).gbra;
             }
             ENDCG
         }
